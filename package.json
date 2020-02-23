@@ -1,0 +1,19 @@
+{
+  "name": "redux-reducer-builder",
+  "version": "0.1.0",
+  "description": "A library that adds easy functions for building redux reducers",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "keywords": [
+    "redux",
+    "reducer"
+  ],
+  "author": "Andrew Luchuk",
+  "license": "MIT",
+  "dependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^7.0.1"
+  }
+}
