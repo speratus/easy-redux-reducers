@@ -12,7 +12,7 @@ function generateReducer() {
                 actionMap[action.type] = callback
                 break
             case 'function':
-                actionMap[action()] = callback
+                actionMap[action().type] = callback
                 break
             case 'string':
                 actionMap[action] = callback
