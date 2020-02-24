@@ -57,7 +57,8 @@ describe('generateReducer', function() {
         })
 
         it('should return state if the action passed to it is not recognized', function() {
-            initialState = {test: 'Hello World'}
+            const initialState = {test: 'Hello World'}
+            builder.setInitialState(initialState)
             builder.addAction('TEST', function(state, action) {
                 return {
                     test: state.test + "!!"
@@ -65,6 +66,17 @@ describe('generateReducer', function() {
             })
             const reducer = builder.buildReducer()
             expect(reducer(initialState, {type: 'TSET'})).to.be(initialState)
+        })
+
+        it('should return state if the action passed to it is not defined', function() {
+            const initialState = {test: 'Hello World'}
+            builder.addAction('TEST', function(state, action) {
+                return {
+                    test: state.test + "!!"
+                }
+            })
+            const reducer = builder.buildReducer()
+            expect(reducer(initialState, undefined)).to.be(initialState)
         })
     })
 })

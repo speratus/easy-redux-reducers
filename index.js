@@ -24,8 +24,8 @@ function generateReducer() {
 
     function buildReducer() {
         return function(state = initialState, action) {
-            processor = actionMap[action.type]
-            if (processor) {
+            if (action && actionMap[action.type]) {
+                let processor = actionMap[action.type]
                 return processor(state, action)
             }
 
