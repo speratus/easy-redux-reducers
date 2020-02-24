@@ -36,4 +36,4 @@ function generateReducer() {
     return {setInitialState, addAction, buildReducer}
 }
 
-module.exports = generateReducer()
+module.exports = generateReducer

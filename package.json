@@ -1,6 +1,6 @@
 {
   "name": "redux-reducer-builder",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A library that adds easy functions for building redux reducers",
   "main": "index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 let expect = require('expect.js')
 
-let builder = require('../index')
+let builder = require('../index')()
 
 describe('generateReducer', function() {
     describe('functions', function() {
@@ -90,6 +90,37 @@ describe('generateReducer', function() {
             })
             const reducer = builder.buildReducer()
             expect(reducer()).to.be(initialState)
+        })
+    })
+
+    describe("generator", function() {
+        it("should return a new builder on every invocation", function() {
+            const generator = require('../index')
+            const firstBuilder = generator()
+            const secondBuilder = generator()
+            expect(firstBuilder).to.not.be(secondBuilder)
+        })
+
+        it("should have separate initial states", function() {
+            const generator = require('../index')
+            const firstBuilder = generator()
+            const secondBuilder = generator()
+
+            const stateOne = {hello: 'world'}
+            const stateTwo = {goodbye: 'state problems'}
+
+            firstBuilder.setInitialState(stateOne)
+            secondBuilder.setInitialState(stateTwo)
+
+            const r1 = firstBuilder.buildReducer()
+            const r2 = secondBuilder.buildReducer()
+
+            const res1 = r1()
+            const res2 = r2()
+
+            console.log('init state 1', res1, '. init state 2', res2)
+
+            expect(res1).to.not.be(res2)
         })
     })
 })
