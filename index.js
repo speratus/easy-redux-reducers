@@ -2,8 +2,8 @@ function generateReducer() {
     let actionMap = {}
     let initialState
 
-    function setInitialState(initialState) {
-        initialState = initialState
+    function setInitialState(state) {
+        initialState = state
     }
 
     function addAction(action, callback) {
@@ -23,7 +23,7 @@ function generateReducer() {
     }
 
     function buildReducer() {
-        return function(state = initialState, action) {
+        return (state = initialState, action) => {
             if (action && actionMap[action.type]) {
                 let processor = actionMap[action.type]
                 return processor(state, action)

@@ -78,5 +78,18 @@ describe('generateReducer', function() {
             const reducer = builder.buildReducer()
             expect(reducer(initialState, undefined)).to.be(initialState)
         })
+
+        it('should return initial state if reducer is called with no args', function() {
+            const initialState = {test: 'Hello World'}
+            builder.setInitialState(initialState)
+
+            builder.addAction('TEST', function(state, action) {
+                return {
+                    test: state.test + "!!!"
+                }
+            })
+            const reducer = builder.buildReducer()
+            expect(reducer()).to.be(initialState)
+        })
     })
 })
