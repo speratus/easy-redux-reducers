@@ -118,8 +118,6 @@ describe('generateReducer', function() {
             const res1 = r1()
             const res2 = r2()
 
-            console.log('init state 1', res1, '. init state 2', res2)
-
             expect(res1).to.not.be(res2)
         })
     })

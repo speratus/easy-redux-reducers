@@ -12,7 +12,7 @@
   ],
   "author": "Andrew Luchuk",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^7.0.1"
   }
