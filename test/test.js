@@ -39,6 +39,16 @@ describe('generateReducer', function() {
         it('should throw an error if given improper action type argument', function() {
             expect(builder.addAction.bind(this, 5, ()=>{})).to.throwError()
         })
+
+        it('should return undefined when called with function', function() {
+            function action() {
+                return {
+                    type: "ACTION"
+                }
+            }
+
+            expect(builder.addAction(action, ()=>{})).to.be(undefined)
+        })
     })
 
     describe('buildReducer', function() {

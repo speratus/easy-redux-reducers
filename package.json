@@ -1,7 +1,7 @@
 {
-  "name": "redux-reducer-builder",
-  "version": "0.2.0",
-  "description": "A library that adds easy functions for building redux reducers",
+  "name": "@speratus/redux-reducer-builder",
+  "version": "1.0.0",
+  "description": "A simple, lightweight, intuitive reducer builder for redux",
   "main": "index.js",
   "scripts": {
     "test": "nyc --reporter=html --reporter=text --reporter=lcovonly mocha",
@@ -13,6 +13,14 @@
   ],
   "author": "Andrew Luchuk",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/speratus/redux-reducer-builder/issues"
+  },
+  "homepage": "https://github.com/speratus/redux-reducer-builder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/speratus/redux-reducer-builder.git"
+  },
   "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^7.0.1",
