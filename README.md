@@ -1,8 +1,8 @@
 # Redux Reducer Builder
-Redux Reducer Builder makes Redux developers' lives easier by enabling them to skip the overhead of writing
-reducers manually.
+Redux reducer builder makes redux users' lives easier by enabling them to skip the overhead of writing
+reducers manually. Instead, `redux-reducer-builder` gives developers a simple, clean library to use.
 
-The typical flow for building a redux reducer requires developers to build reducers using switch statements. Generally, developers consider switch statements to be code smells in Object Oriented code.
+The typical flow for building a redux reducer requires developers to build reducers using switch statements. Generally, developers consider switch statements to be code smells in object oriented code. `redux-reducer-builder` eliminates the need to write switch statements in reducers.
 
 ## Why use Redux Reducer builder?
 Imagine we are building a reducer for a scenario in which we have an array of items in which each item is displayed one at a time. Consequently, we will also need a counter to keep track of the position in the array.
@@ -56,7 +56,7 @@ builder.addAction('ADVANCE_COUNTER', (state, action) => {
 const reducer = builder.buildReducer()
 ```
 
-The second example is significantly cleaner and a little bit shorter.
+The second example is significantly cleaner and a little bit shorter, making reducer files more readable and much more maintainable.
 
 # Usage Example
 In order to use `redux-reducer-builder`, we first have to obtain a builder:
@@ -126,7 +126,7 @@ For more details, see [addAction details](#addaction-details).
 
 You can install `redux-reducer-builder` from npm.
 ```
-npm install redux-reducer-builder
+npm install @speratus/redux-reducer-builder
 ```
 You can also install `redux-reducer-builder` from Github.
 ```
