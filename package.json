@@ -4,7 +4,8 @@
   "description": "A library that adds easy functions for building redux reducers",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "coverage": "nyc report --reporter=lcovonly | codecov"
   },
   "keywords": [
     "redux",
