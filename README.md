@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/speratus/redux-reducer-builder.svg?branch=master)](https://travis-ci.org/speratus/redux-reducer-builder)
+[![codecov](https://codecov.io/gh/speratus/redux-reducer-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/speratus/redux-reducer-builder)
 # Redux Reducer Builder
 Redux reducer builder makes redux users' lives easier by enabling them to skip the overhead of writing
 reducers manually. Instead, `redux-reducer-builder` gives developers a simple, clean library to use.
