@@ -4,7 +4,8 @@
   "description": "A simple, lightweight, intuitive reducer builder for redux",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "nyc --reporter=html --reporter=text --reporter=lcovonly mocha",
+    "coverage": "nyc report --reporter=lcovonly | codecov"
   },
   "keywords": [
     "redux",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "mocha": "^7.0.1"
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0"
   }
 }

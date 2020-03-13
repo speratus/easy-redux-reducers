@@ -1,8 +1,11 @@
+
+[![Build Status](https://travis-ci.org/speratus/redux-reducer-builder.svg?branch=master)](https://travis-ci.org/speratus/redux-reducer-builder)
+[![codecov](https://codecov.io/gh/speratus/redux-reducer-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/speratus/redux-reducer-builder)
 # Easy Redux Reducers
 Easy Redux Reducers makes Redux developers' lives easier by enabling them to skip the overhead of writing
-reducers manually.
+reducers manually. Instead, `easy-redux-reducers` gives developers a simple, clean library to use.
 
-The typical flow for building a redux reducer requires developers to build reducers using switch statements. Generally, developers consider switch statements to be code smells in Object Oriented code.
+The typical flow for building a redux reducer requires developers to build reducers using switch statements. Generally, developers consider switch statements to be code smells in object oriented code. `redux-reducer-builder` eliminates the need to write switch statements in reducers.
 
 ## Why use Easy Redux Reducers?
 Imagine we are building a reducer for a scenario in which we have an array of items in which each item is displayed one at a time. Consequently, we will also need a counter to keep track of the position in the array.
@@ -56,7 +59,7 @@ builder.addAction('ADVANCE_COUNTER', (state, action) => {
 const reducer = builder.buildReducer()
 ```
 
-The second example is significantly cleaner and a little bit shorter.
+The second example is significantly cleaner and a little bit shorter, making reducer files more readable and much more maintainable.
 
 # Usage Example
 In order to use `easy-redux-reducers`, we first have to obtain a builder:
