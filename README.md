@@ -1,5 +1,4 @@
-
-[![Build Status](https://travis-ci.org/speratus/redux-reducer-builder.svg?branch=master)](https://travis-ci.org/speratus/redux-reducer-builder)
+[![Build Status](https://travis-ci.org/speratus/easy-redux-reducers.svg?branch=master)](https://travis-ci.org/speratus/easy-redux-reducers)
 [![codecov](https://codecov.io/gh/speratus/easy-redux-reducers/branch/master/graph/badge.svg)](https://codecov.io/gh/speratus/easy-redux-reducers)
 # Easy Redux Reducers
 Easy Redux Reducers makes Redux developers' lives easier by enabling them to skip the overhead of writing
