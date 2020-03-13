@@ -1,12 +1,13 @@
+
 [![Build Status](https://travis-ci.org/speratus/redux-reducer-builder.svg?branch=master)](https://travis-ci.org/speratus/redux-reducer-builder)
 [![codecov](https://codecov.io/gh/speratus/redux-reducer-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/speratus/redux-reducer-builder)
-# Redux Reducer Builder
-Redux reducer builder makes redux users' lives easier by enabling them to skip the overhead of writing
-reducers manually. Instead, `redux-reducer-builder` gives developers a simple, clean library to use.
+# Easy Redux Reducers
+Easy Redux Reducers makes Redux developers' lives easier by enabling them to skip the overhead of writing
+reducers manually. Instead, `easy-redux-reducers` gives developers a simple, clean library to use.
 
 The typical flow for building a redux reducer requires developers to build reducers using switch statements. Generally, developers consider switch statements to be code smells in object oriented code. `redux-reducer-builder` eliminates the need to write switch statements in reducers.
 
-## Why use Redux Reducer builder?
+## Why use Easy Redux Reducers?
 Imagine we are building a reducer for a scenario in which we have an array of items in which each item is displayed one at a time. Consequently, we will also need a counter to keep track of the position in the array.
 
 Our initial state could look something like this:
@@ -38,7 +39,7 @@ function reducer(state = initialState, action) {
     }
 }
 ```
-With Redux Reducer builder, we would simply write the following:
+With Easy Redux Reducers, we would simply write the following:
 
 ```js
 builder.addAction('SET_ITEMS', (state, action) => {
@@ -61,9 +62,9 @@ const reducer = builder.buildReducer()
 The second example is significantly cleaner and a little bit shorter, making reducer files more readable and much more maintainable.
 
 # Usage Example
-In order to use `redux-reducer-builder`, we first have to obtain a builder:
+In order to use `easy-redux-reducers`, we first have to obtain a builder:
 ```js
-import factory from 'redux-reducer-builder'
+import factory from 'easy-redux-reducers'
 
 const builder = factory()
 ```
@@ -126,13 +127,13 @@ For more details, see [addAction details](#addaction-details).
 
 # Installation
 
-You can install `redux-reducer-builder` from npm.
+You can install `easy-redux-reducers` from npm.
 ```
-npm install @speratus/redux-reducer-builder
+npm install easy-redux-reducers
 ```
-You can also install `redux-reducer-builder` from Github.
+You can also install `easy-redux-reducers` from Github.
 ```
-npm install git+https://github.com/speratus/redux-reducer-builder.git
+npm install git+https://github.com/speratus/easy-redux-reducers.git
 ```
 
 # addAction Details
@@ -189,9 +190,11 @@ export function reducerCallback(state, action) {
         items: action.items
     }
 }
+```
 
+```js
 // reducers/itemsReducer.js
-import factory from 'redux-reducer-builder'
+import factory from 'easy-redux-reducers'
 
 import setItem, {reducerCallback} from '../actions/setItem'
 

@@ -1,5 +1,5 @@
 {
-  "name": "@speratus/redux-reducer-builder",
+  "name": "easy-redux-reducers",
   "version": "1.0.0",
   "description": "A simple, lightweight, intuitive reducer builder for redux",
   "main": "index.js",
@@ -14,12 +14,12 @@
   "author": "Andrew Luchuk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/speratus/redux-reducer-builder/issues"
+    "url": "https://github.com/speratus/easy-redux-reducers/issues"
   },
-  "homepage": "https://github.com/speratus/redux-reducer-builder",
+  "homepage": "https://github.com/speratus/easy-redux-reducers",
   "repository": {
     "type": "git",
-    "url": "https://github.com/speratus/redux-reducer-builder.git"
+    "url": "https://github.com/speratus/easy-redux-reducers.git"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
