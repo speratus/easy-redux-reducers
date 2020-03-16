@@ -1,3 +1,25 @@
+function mapAction(map, action, callback) {
+    switch(typeof action) {
+        case 'object':
+            if (!action.type) {
+                throw new TypeError("action must be a valid action object.")
+            }
+            map[action.type] = callback
+            break
+        case 'function':
+            if (!action().type) {
+                throw new TypeError("action() must return a valid action object.")
+            }
+            map[action().type] = callback
+            break
+        case 'string':
+            map[action] = callback
+            break
+        default:
+            throw new Error("Action must be either an object, function, or a string")
+    }
+}
+
 function generateReducer() {
     let actionMap = {}
     let initialState
@@ -7,19 +29,7 @@ function generateReducer() {
     }
 
     function addAction(action, callback) {
-        switch(typeof action) {
-            case 'object':
-                actionMap[action.type] = callback
-                break
-            case 'function':
-                actionMap[action().type] = callback
-                break
-            case 'string':
-                actionMap[action] = callback
-                break
-            default:
-                throw new Error("Action must be either an object, function or a string")
-        }
+        mapAction(actionMap, action, callback)
     }
 
     function buildReducer() {
