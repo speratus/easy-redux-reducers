@@ -33,7 +33,7 @@ describe('generateReducer', function() {
 
     describe('addAction', function() {
         it('should return undefined', function() {
-            expect(builder.addAction({}, ()=>{})).to.be(undefined)
+            expect(builder.addAction({type: 'T'}, ()=>{})).to.be(undefined)
         })
 
         it('should throw an error if given improper action type argument', function() {
@@ -48,6 +48,18 @@ describe('generateReducer', function() {
             }
 
             expect(builder.addAction(action, ()=>{})).to.be(undefined)
+        })
+
+        it("should throw an error if given an action object without a type attribute", function() {
+            expect(builder.addAction.bind(this, {}, ()=>{})).to.throwError()
+        })
+
+        it("should throw an error if given an action builder that returns an object without a type attribute", function() {
+            function failure() {
+                return {}
+            }
+
+            expect(builder.addAction.bind(this, failure, ()=>{})).to.throwError()
         })
     })
 
